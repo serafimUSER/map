@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Пример карты Leaflet с маршрутом</title>
+    <!-- Подключаем библиотеку Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- Подключаем библиотеку Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Подключаем плагин Leaflet Routing Machine CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+
+    <!-- Подключаем плагин Leaflet Routing Machine JavaScript -->
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+  </head>
+  <body>
+    <!-- Создаем контейнер для карты -->
+    <div id="map" style="width: 100%; height: 500px;"></div>
+
+    <script>
+      // Создаем карту
+      var map = L.map('map').setView([51.505, -0.09], 13);
+
+      // Добавляем слой карты
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data &copy; OpenStreetMap contributors'
+      }).addTo(map);
+
+      // Создаем две точки
+      var pointA = L.latLng(53.9022056,27.5818553);
+      var pointB = L.latLng(53.9097802,27.5402158);
+     
+      // Создаем объект маршрута
+      var routingControl = L.Routing.control({
+        waypoints: [
+          pointA,
+          pointB
+        ],
+        routeWhileDragging: true,
+        lineOptions: {
+            styles: [{color: '#7393A7', opacity: 1, weight: 5}]
+        }
+      }).addTo(map);
+    </script>
+  </body>
+</html>

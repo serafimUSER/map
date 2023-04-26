@@ -1,0 +1,50 @@
+
+.leaflet-control-zoom {
+    padding: 10px;
+}
+
+.leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar{
+    border: none;
+    background-clip: none;
+}
+
+.leaflet-touch .leaflet-bar a:first-child {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+.leaflet-touch .leaflet-bar a:last-child {
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.leaflet-touch .leaflet-bar a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: normal;
+    background-color: #7393A7;
+}
+
+.leaflet-control-zoom-out span,
+.leaflet-control-zoom-in span{
+    font-size: 28px;
+    color: #E8ECF1;
+}
+
+.leaflet-control-zoom-out,
+.leaflet-control-zoom-in {
+    
+    border: none;
+    outline: none;
+
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+
+td {
+    color: #456173;
+}

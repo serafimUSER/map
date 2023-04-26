@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+     <script type="text/javascript" src="https://stamen-maps.a.ssl.fastly.net/js/tile.stamen.js?v1.3.0"></script>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="/style/map.css">
+    <title>Главная страница</title>
+</head>
+<body>
+    <div class="divide">
+        <div class="navigation">
+            <div class="nav_content">
+                <div class="item">
+                    <button id="ButtonActive1" class="nav_item" data-id="1">
+                        <img src="./img/active/monuments.svg" id="Img1" class="icon" alt="">
+                    </button>
+                </div>
+                <div class="item">
+                    <button id="ButtonActive2" class="nav_item" data-id="2">
+                        <img src="./img/active/musiem.svg" id="Img2" class="icon" alt="">
+                    </button>
+                </div>
+                <div class="item">
+                    <button id="ButtonActive3" class="nav_item" data-id="3">
+                        <img src="./img/active/others.svg" id="Img3" class="icon" alt="">
+                    </button>
+                </div>
+                <div class="lang__item">
+                    <button id="Lang">
+                        <img src="../img/active/lang.svg" class="icon" id="ImgLang">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="header_logotype">
+                <h1><span style="color:#7393A7">WWII</span> <span>Legacy Trail</span></h1>
+            </div>
+            <div class="content_body">
+                <div class="cards_info">
+                    <div class="info__header">
+                        <h4 id="column">Помнікі</h4>
+                    </div>
+                    <div class="info__content" id="render">
+                    </div>
+                </div>
+                <div id="map" class="map"></div>
+            </div>
+        </div>
+    </div>
+    <div class="windowWithInfo unactive" id="windowContent">
+        <div class="window">
+            <div class="header__window">
+                <a href="#" id="close" class="close">
+                    <img src="./img/icon/close.svg" alt="">
+                </a>
+            </div>
+            <div class="window__content">
+                <div class="slider__window">
+                    <div class="images__window">
+                        <img id="img_window" >
+                    </div>
+                </div>
+                <div class="text__window">
+                    <h2 id="title__window" class="title__window"></h2>
+                    <p id="text_window" class="text_window"></p>
+                    <div class="btn_right">
+                        <button id="route">
+                            Проложить маршрут
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/map.js"></script>
+    <script src="./js/nav.js"></script>
+    <script>
+        ButtonActive(1)
+    </script>
+</body>
+</html>

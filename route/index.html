@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/style/route.css">
+    <link rel="stylesheet" href="/style/map.css">
+    <link rel="stylesheet" href="/style/slider.css">
+
+    <!-- Подключаем библиотеку Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Подключаем плагин Leaflet Routing Machine CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+
+    <!-- Подключаем плагин Leaflet Routing Machine JavaScript -->
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Создаем контейнер для карты -->
+        <div class="map__container">
+            <div id="map"></div>
+        </div>
+        <div class="divide">
+            <div class="slider">
+                <div class="slider-container">
+                  <div class="slider-wrapper">
+                    <div class="slider-slide">
+                      <img src="https://via.placeholder.com/500x300/ff0000/ffffff" id="img_1" alt="Slide 1">
+                    </div>
+                    <div class="slider-slide">
+                      <img src="https://via.placeholder.com/500x300/00ff00/ffffff" id="img_2" alt="Slide 2">
+                    </div>
+                    <div class="slider-slide">
+                      <img src="https://via.placeholder.com/500x300/0000ff/ffffff" id="img_3" alt="Slide 3">
+                    </div>
+                  </div>
+                </div>
+                <div class="slider-controls">
+                  <button class="slider-prev">
+                    <i class='bx bx-chevron-left'></i>
+                  </button>
+                  <button class="slider-next">
+                    <i class='bx bx-chevron-right'></i>
+                  </button>
+                </div>
+              </div>
+            <div class="row">
+                <div class="navigation">
+                    <h2 class="title_histroy" id="title_card"></h2>
+                    <p class="text_history" id="text_card"></p>
+                </div>
+                <button id="back" class="back_btn">
+                    <i class='bx bx-left-arrow-alt'></i>
+                    <span>Вернуться назад</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="/js/route.js"></script>
+    <script src="/js/slider.js"></script>
+</body>
+</html>
